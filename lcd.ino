@@ -5,13 +5,6 @@
 #define SERIESRESISTOR 10000
 int elapsed_time = 1;
 
-//Display pins
-// pin 2 - Serial clock (SCLK)
-// pin 3 - Serial data in (SDIN)
-// pin 4 - Data/Command select (D/C)
-// pin 8 - LCD reset (RST)
-// Not connected to arduino:
-// pin 5 -> gnd - LCD chip enable (SCE)
 static PCD8544 my_display;
 
 
