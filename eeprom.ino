@@ -14,8 +14,8 @@ void setup(void)
 {
   Serial.begin(115200);
   Wire.begin();
-  pinMode(PB7, INPUT_PULLUP);
   pinMode(PB6, INPUT_PULLUP);
+  pinMode(PB7, INPUT_PULLUP);
 }
  
 void loop(){
@@ -23,8 +23,8 @@ void loop(){
     Serial.println("Wire lib okay!");
 
   //write test
-//  write_EEPROM(i2c_bus_000, 8192, 0x66);
-//  Serial.println( read_EEPROM(i2c_bus_000, 8192), HEX );
+//  write_EEPROM(i2c_bus_000, 8191, 0x66);//8192 will start over at 0000!
+//  Serial.println( read_EEPROM(i2c_bus_000, 8191), HEX );
 
   unsigned int address = 0;
   byte value;
@@ -53,7 +53,7 @@ void loop(){
   }
   Serial.println();
   Serial.println("----------------------");
-  delay(500);
+  delay(2000);
 }
  
 void write_EEPROM(int bus, unsigned int address, byte data ) 
